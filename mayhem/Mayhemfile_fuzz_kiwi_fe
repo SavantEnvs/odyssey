@@ -1,0 +1,11 @@
+project: savantenvs/odyssey
+target: kiwi-fe
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/kiwi-fe/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_kiwi_fe
+    libfuzzer: true
+    timeout: 5

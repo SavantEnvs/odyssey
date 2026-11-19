@@ -1,0 +1,11 @@
+project: savantenvs/odyssey
+target: sql-minimal
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sql-minimal/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_sql_minimal
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,1 @@
+BEGIN; SET search_path TO public; SELECT pg_is_in_recovery(); COMMIT;

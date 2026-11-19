@@ -1,0 +1,11 @@
+project: savantenvs/odyssey
+target: scram-server
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/scram-server/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_scram_server
+    libfuzzer: true
+    timeout: 5

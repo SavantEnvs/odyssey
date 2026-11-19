@@ -1,0 +1,11 @@
+project: savantenvs/odyssey
+target: sql-full
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sql-full/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_sql_full
+    libfuzzer: true
+    timeout: 5

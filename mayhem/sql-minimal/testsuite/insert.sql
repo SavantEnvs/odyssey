@@ -1,0 +1,1 @@
+INSERT INTO t(a,b) VALUES (U&'\0041', E'x\n') RETURNING *
